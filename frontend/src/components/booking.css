@@ -1,0 +1,3 @@
+/* booking.css */
+.card { transition: transform 0.2s ease; }
+.card:hover { transform: translateY(-3px); }

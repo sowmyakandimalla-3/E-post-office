@@ -1,0 +1,71 @@
+/* src/index.css - global styles for the app */
+
+:root{
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1d4ed8;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+*{ box-sizing: border-box; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+body{ margin:0; background:var(--bg); color:#111827; }
+
+/* header */
+.header{ padding:28px 24px 12px 24px; text-align:left; }
+.header h1{ margin:0; color:var(--accent); font-size:34px; }
+.header .subtitle{ margin-top:6px; color:var(--muted); }
+
+/* container */
+.container{ padding:24px; max-width:1100px; margin:0 auto; }
+
+/* layout grid */
+.booking-grid{ display:grid; gap:18px; grid-template-columns: 1fr 420px; align-items:start; }
+
+/* card */
+.card{ background:var(--card); border-radius:10px; padding:18px; box-shadow:var(--shadow); }
+.card h2{ margin-top:0; }
+
+/* form */
+.form label{ display:block; margin-bottom:10px; font-size:14px; color:var(--muted); }
+.form input{ width:100%; padding:10px 12px; border:1px solid #e6e9ef; border-radius:6px; margin-top:6px; outline:none; transition:box-shadow .15s, border-color .15s; }
+.form input:focus{ box-shadow:0 6px 18px rgba(37,99,235,0.06); border-color:var(--accent-600); }
+
+/* row for origin/destination */
+.form .row{ display:flex; gap:10px; }
+.form .row span{ width:50%; display:block; }
+
+/* actions */
+.actions{ display:flex; gap:10px; margin-top:12px; }
+.btn{ padding:8px 14px; border-radius:8px; border:1px solid #d1d5db; background:#fff; cursor:pointer; }
+.btn.primary{ background:var(--accent); color:#fff; border-color:transparent; box-shadow: 0 6px 18px rgba(37,99,235,0.12); }
+.btn:disabled{ opacity:0.6; cursor:not-allowed; }
+
+/* result area */
+.result{ margin-top:14px; padding:12px; border-radius:8px; background:#fbfdff; border:1px solid #eef2ff; }
+
+/* footer */
+.footer{ text-align:center; padding:18px; color:var(--muted); }
+
+/* modal styles */
+.modal-overlay{ position:fixed; inset:0; background:rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; z-index:999; }
+.modal{ width:420px; max-width:92%; background:var(--card); border-radius:10px; overflow:hidden; box-shadow:var(--shadow); }
+.modal-header{ padding:12px 16px; }
+.modal-header h3{ margin:0; font-size:18px; }
+.modal-body{ padding:14px 16px; color:#111827; }
+.modal-actions{ padding:12px 16px; text-align:right; border-top:1px solid #f3f4f6; }
+.modal-success{ background: linear-gradient(90deg, rgba(16,185,129,0.12), rgba(16,185,129,0.06)); }
+.modal-error{ background: linear-gradient(90deg, rgba(239,68,68,0.08), rgba(239,68,68,0.04)); }
+
+/* type classes applied dynamically */
+.modal-success h3{ color:var(--success); }
+.modal-error h3{ color:var(--danger); }
+
+/* small screens */
+@media (max-width:880px){
+  .booking-grid{ grid-template-columns: 1fr; }
+  .form .row{ flex-direction:column; }
+}
