@@ -2,7 +2,30 @@
 
 A full-stack web application built with **MERN Stack (MongoDB, Express, React, Node.js)** that allows users to book, track, and manage postal parcels in real time.
 
-![App Screenshot](./output-demo.png)
+##  Project Demo — E-Post Office Management System  
+
+Below are live interface screenshots showing how the application works:  
+
+### 🧾 1️⃣ Parcel Booking Interface  
+Users can enter sender and recipient details, then click **“Book Parcel”** to create a shipment.  
+![Parcel Booking Interface](./output-demo2.png)  
+
+---
+
+### 🚚 2️⃣ Real-Time Parcel Tracking  
+Once booked, users can track their parcel live using a unique Parcel ID.  
+![Parcel Tracking Screen](./output-demo3.png)  
+
+---
+
+### 🎉 3️⃣ Live Notifications & Pop-ups  
+When a parcel is booked or updated, users receive instant pop-up notifications and see live updates on screen.  
+![Live Notifications](./output-demo.png)  
+
+---
+
+Each screenshot demonstrates the app’s **interactive UI**, **real-time updates**, and **user-friendly experience** powered by React, Express, MongoDB, and Socket.IO ⚡
+
 
 ---
 
